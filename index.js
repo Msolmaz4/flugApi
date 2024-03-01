@@ -4,7 +4,7 @@ const app = express()
 require('dotenv').config()
 PORT = process.env.PORT || 8001
 
-
+ app.use(require("./src/middlewares/findSearch"))
 app.get("/",(req,res)=>{
     res.send("welcome")
 })
